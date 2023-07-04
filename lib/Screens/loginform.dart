@@ -22,7 +22,7 @@ class LoginForm extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
-                    fontSize: 30.0,
+                    fontSize: 40.0,
                   ),
                 ),
                 SizedBox(height: 10.0),
@@ -31,7 +31,64 @@ class LoginForm extends StatelessWidget {
                   height: 80.0,
                   width: 80.0,
                 ),
-                 SizedBox(height: 10.0),
+                SizedBox(height: 10.0),
+                Text(
+                  'Bibek Code',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black38,
+                    fontSize: 25.0,
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                  margin: EdgeInsets.only(top: 20.0),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        borderSide: BorderSide(
+                          color: Colors.blue,
+                        ),
+                      ),
+                      prefixIcon: Icon(Icons.person),
+                      hintText: 'User Name',
+                      fillColor: Colors.grey[200],
+                      filled: true,
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                  margin: EdgeInsets.only(top: 10.0),
+                  child: TextFormField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        borderSide: BorderSide(
+                          color: Colors.blue,
+                        ),
+                      ),
+                      prefixIcon: Icon(Icons.lock),
+                      hintText: 'Password',
+                      fillColor: Colors.grey[200],
+                      filled: true,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
