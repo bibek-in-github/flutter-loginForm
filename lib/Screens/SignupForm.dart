@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:login_form/Screens/SignupForm.dart';
+import 'package:login_form/Screens/loginform.dart';
 
-class LoginForm extends StatelessWidget {
-  const LoginForm({super.key});
+class SignupForm extends StatefulWidget {
+  const SignupForm({super.key});
 
+  @override
+  State<SignupForm> createState() => _SignupFormState();
+}
+
+class _SignupFormState extends State<SignupForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login with signup'),
+        title: Text('Login with Signup'),
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -96,7 +101,7 @@ class LoginForm extends StatelessWidget {
                   child: TextButton(
                     onPressed: () {},
                     child: Text(
-                      'Login',
+                      'Signup',
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
@@ -109,13 +114,13 @@ class LoginForm extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Does not have account?'),
+                      Text('Does you have account?'),
                       TextButton(
                         onPressed: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (_) => SignupForm(),
+                              builder: (_) => LoginForm(),
                             ),
                           );
                         },
