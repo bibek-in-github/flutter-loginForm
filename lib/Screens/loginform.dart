@@ -89,6 +89,36 @@ class LoginForm extends StatelessWidget {
                     ),
                   ),
                 ),
+                Container(
+                  margin: EdgeInsets.all(30.0),
+                  width: double.infinity,
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Login',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                ),
+                Container(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('Does not have account?'),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          'Signup',
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
