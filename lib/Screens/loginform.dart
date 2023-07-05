@@ -59,7 +59,7 @@ class LoginForm extends StatelessWidget {
                         ),
                       ),
                       prefixIcon: Icon(Icons.person),
-                      hintText: 'User Name',
+                      hintText: 'User ID',
                       fillColor: Colors.grey[200],
                       filled: true,
                     ),

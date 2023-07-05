@@ -24,7 +24,7 @@ class _SignupFormState extends State<SignupForm> {
               children: [
                 SizedBox(height: 50.0),
                 Text(
-                  'Login',
+                  'Signin',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
@@ -64,7 +64,55 @@ class _SignupFormState extends State<SignupForm> {
                         ),
                       ),
                       prefixIcon: Icon(Icons.person),
+                      hintText: 'User ID',
+                      fillColor: Colors.grey[200],
+                      filled: true,
+                    ),
+                  ),
+                ),
+                  Container(
+                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                  margin: EdgeInsets.only(top: 5.0),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        borderSide: BorderSide(
+                          color: Colors.blue,
+                        ),
+                      ),
+                      prefixIcon: Icon(Icons.person_outline),
                       hintText: 'User Name',
+                      fillColor: Colors.grey[200],
+                      filled: true,
+                    ),
+                  ),
+                ),
+                        Container(
+                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                  margin: EdgeInsets.only(top: 5.0),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        borderSide: BorderSide(
+                          color: Colors.blue,
+                        ),
+                      ),
+                      prefixIcon: Icon(Icons.email),
+                      hintText: 'Email',
                       fillColor: Colors.grey[200],
                       filled: true,
                     ),
@@ -72,7 +120,7 @@ class _SignupFormState extends State<SignupForm> {
                 ),
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
-                  margin: EdgeInsets.only(top: 10.0),
+                  margin: EdgeInsets.only(top: 5.0),
                   child: TextFormField(
                     obscureText: true,
                     decoration: InputDecoration(
@@ -90,6 +138,31 @@ class _SignupFormState extends State<SignupForm> {
                       ),
                       prefixIcon: Icon(Icons.lock),
                       hintText: 'Password',
+                      fillColor: Colors.grey[200],
+                      filled: true,
+                    ),
+                  ),
+                ),
+                 Container(
+                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                  margin: EdgeInsets.only(top: 5.0),
+                  child: TextFormField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        borderSide: BorderSide(
+                          color: Colors.blue,
+                        ),
+                      ),
+                      prefixIcon: Icon(Icons.lock),
+                      hintText: 'Confirm Password',
                       fillColor: Colors.grey[200],
                       filled: true,
                     ),
@@ -125,7 +198,7 @@ class _SignupFormState extends State<SignupForm> {
                           );
                         },
                         child: Text(
-                          'Signup',
+                          'Sign In',
                           style: TextStyle(color: Colors.blue),
                         ),
                       ),
