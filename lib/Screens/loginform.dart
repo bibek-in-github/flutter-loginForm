@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:login_form/Comm/genTextFormField.dart';
 import 'package:login_form/Screens/SignupForm.dart';
 
 class LoginForm extends StatelessWidget {
-  const LoginForm({super.key});
+  final _conUserId = TextEditingController();
+  final _conPassword = TextEditingController();
+  LoginForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,54 +44,19 @@ class LoginForm extends StatelessWidget {
                     fontSize: 25.0,
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20.0),
-                  margin: EdgeInsets.only(top: 20.0),
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                        borderSide: BorderSide(
-                          color: Colors.transparent,
-                        ),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                        borderSide: BorderSide(
-                          color: Colors.blue,
-                        ),
-                      ),
-                      prefixIcon: Icon(Icons.person),
-                      hintText: 'User ID',
-                      fillColor: Colors.grey[200],
-                      filled: true,
-                    ),
-                  ),
+                getTextFormField(
+                  controller: _conUserId,
+                  hintname: 'User ID',
+                  icon: Icons.person,
                 ),
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20.0),
-                  margin: EdgeInsets.only(top: 10.0),
-                  child: TextFormField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                        borderSide: BorderSide(
-                          color: Colors.transparent,
-                        ),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                        borderSide: BorderSide(
-                          color: Colors.blue,
-                        ),
-                      ),
-                      prefixIcon: Icon(Icons.lock),
-                      hintText: 'Password',
-                      fillColor: Colors.grey[200],
-                      filled: true,
-                    ),
-                  ),
+                SizedBox(
+                  height: 5.0,
+                ),
+                getTextFormField(
+                  controller: _conPassword,
+                  hintname: 'Password',
+                  icon: Icons.lock,
+                  isObscureText: true,
                 ),
                 Container(
                   margin: EdgeInsets.all(30.0),
