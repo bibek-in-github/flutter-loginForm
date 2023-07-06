@@ -48,6 +48,7 @@ class LoginForm extends StatelessWidget {
                   controller: _conUserId,
                   hintname: 'User ID',
                   icon: Icons.person,
+                  inputType: TextInputType.number,
                 ),
                 SizedBox(
                   height: 5.0,
@@ -57,6 +58,7 @@ class LoginForm extends StatelessWidget {
                   hintname: 'Password',
                   icon: Icons.lock,
                   isObscureText: true,
+                  inputType: TextInputType.visiblePassword,
                 ),
                 Container(
                   margin: EdgeInsets.all(30.0),

@@ -5,11 +5,13 @@ class getTextFormField extends StatelessWidget {
   final String hintname;
   final IconData icon;
   final bool isObscureText;
-  const getTextFormField(
+   final TextInputType inputType ;
+   getTextFormField(
       {required this.controller,
       required this.hintname,
       required this.icon,
        this.isObscureText = false,
+         required this.inputType,
       super.key});
 
   @override
@@ -20,6 +22,7 @@ class getTextFormField extends StatelessWidget {
       child: TextFormField(
         controller: controller,
         obscureText: isObscureText,
+        keyboardType: inputType,
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(30.0)),
