@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_form/Comm/genLoginSignupHeader.dart';
 import 'package:login_form/Comm/genTextFormField.dart';
 import 'package:login_form/Screens/loginform.dart';
 
@@ -28,30 +29,7 @@ class _SignupFormState extends State<SignupForm> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: 50.0),
-                Text(
-                  'Signup',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                    fontSize: 40.0,
-                  ),
-                ),
-                SizedBox(height: 10.0),
-                Image.asset(
-                  'assests/images/logo.jpg',
-                  height: 80.0,
-                  width: 80.0,
-                ),
-                SizedBox(height: 10.0),
-                Text(
-                  'Bibek Code',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black38,
-                    fontSize: 25.0,
-                  ),
-                ),
+               genLoginSignupHeader(headerName: 'Signin',),
                 getTextFormField(
                   controller: _conUserId,
                   hintname: 'User ID',
@@ -61,7 +39,7 @@ class _SignupFormState extends State<SignupForm> {
                 SizedBox(
                   height: 5.0,
                 ),
-                 getTextFormField(
+                getTextFormField(
                   controller: _conUserName,
                   hintname: 'User Name',
                   icon: Icons.person_outline,
@@ -79,7 +57,6 @@ class _SignupFormState extends State<SignupForm> {
                 SizedBox(
                   height: 5.0,
                 ),
-                
                 getTextFormField(
                   controller: _conPassword,
                   hintname: 'Password',
@@ -87,17 +64,16 @@ class _SignupFormState extends State<SignupForm> {
                   isObscureText: true,
                   inputType: TextInputType.visiblePassword,
                 ),
-                 SizedBox(
+                SizedBox(
                   height: 5.0,
                 ),
-                  getTextFormField(
+                getTextFormField(
                   controller: _conCPassword,
                   hintname: 'Confirm Password',
                   icon: Icons.lock,
                   isObscureText: true,
                   inputType: TextInputType.visiblePassword,
                 ),
-             
                 Container(
                   margin: EdgeInsets.all(30.0),
                   width: double.infinity,
@@ -120,12 +96,10 @@ class _SignupFormState extends State<SignupForm> {
                       Text('Does you have account?'),
                       TextButton(
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => LoginForm(),
-                            ),
-                          );
+                          Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(builder: (_) => LoginForm()),
+                              (Route<dynamic> route) => false);
                         },
                         child: Text(
                           'Sign In',

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_form/Comm/genLoginSignupHeader.dart';
 import 'package:login_form/Comm/genTextFormField.dart';
 import 'package:login_form/Screens/SignupForm.dart';
 
@@ -20,30 +21,7 @@ class LoginForm extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: 50.0),
-                Text(
-                  'Login',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                    fontSize: 40.0,
-                  ),
-                ),
-                SizedBox(height: 10.0),
-                Image.asset(
-                  'assests/images/logo.jpg',
-                  height: 80.0,
-                  width: 80.0,
-                ),
-                SizedBox(height: 10.0),
-                Text(
-                  'Bibek Code',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black38,
-                    fontSize: 25.0,
-                  ),
-                ),
+               genLoginSignupHeader(headerName: 'Login',),
                 getTextFormField(
                   controller: _conUserId,
                   hintname: 'User ID',
