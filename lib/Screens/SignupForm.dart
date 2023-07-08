@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_form/Comm/genLoginSignupHeader.dart';
-import 'package:login_form/Comm/genTextFormField.dart';
+import 'package:login_form/Comm/gen_text_form_field.dart';
 import 'package:login_form/Screens/loginform.dart';
 
 class SignupForm extends StatefulWidget {
@@ -30,7 +30,7 @@ class _SignupFormState extends State<SignupForm> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                genLoginSignupHeader(headerName: 'Signin',),
-                getTextFormField(
+                CustomTextFormField(
                   controller: _conUserId,
                   hintname: 'User ID',
                   icon: Icons.person,
@@ -39,7 +39,7 @@ class _SignupFormState extends State<SignupForm> {
                 SizedBox(
                   height: 5.0,
                 ),
-                getTextFormField(
+                CustomTextFormField(
                   controller: _conUserName,
                   hintname: 'User Name',
                   icon: Icons.person_outline,
@@ -48,7 +48,7 @@ class _SignupFormState extends State<SignupForm> {
                 SizedBox(
                   height: 5.0,
                 ),
-                getTextFormField(
+                CustomTextFormField(
                   controller: _conEmail,
                   hintname: 'Email',
                   icon: Icons.email,
@@ -57,7 +57,7 @@ class _SignupFormState extends State<SignupForm> {
                 SizedBox(
                   height: 5.0,
                 ),
-                getTextFormField(
+                CustomTextFormField(
                   controller: _conPassword,
                   hintname: 'Password',
                   icon: Icons.lock,
@@ -67,7 +67,7 @@ class _SignupFormState extends State<SignupForm> {
                 SizedBox(
                   height: 5.0,
                 ),
-                getTextFormField(
+                CustomTextFormField(
                   controller: _conCPassword,
                   hintname: 'Confirm Password',
                   icon: Icons.lock,
