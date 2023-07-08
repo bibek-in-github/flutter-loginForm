@@ -1,5 +1,29 @@
 import 'package:flutter/material.dart'
-    show AppBar, Axis, BorderRadius, BoxDecoration, BuildContext, Colors, Column, Container, EdgeInsets, Icons, MainAxisAlignment, MaterialPageRoute, Navigator, Row, Scaffold, SingleChildScrollView, SizedBox, StatelessWidget, Text, TextButton, TextEditingController, TextInputType, TextStyle, Widget;
+    show
+        AppBar,
+        Axis,
+        BorderRadius,
+        BoxDecoration,
+        BuildContext,
+        Colors,
+        Column,
+        Container,
+        EdgeInsets,
+        Icons,
+        MainAxisAlignment,
+        MaterialPageRoute,
+        Navigator,
+        Row,
+        Scaffold,
+        SingleChildScrollView,
+        SizedBox,
+        StatelessWidget,
+        Text,
+        TextButton,
+        TextEditingController,
+        TextInputType,
+        TextStyle,
+        Widget;
 import 'package:login_form/Comm/genLoginSignupHeader.dart';
 import 'package:login_form/Comm/gen_text_form_field.dart';
 import 'package:login_form/Screens/SignupForm.dart';
@@ -20,7 +44,7 @@ class LoginForm extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            genLoginSignupHeader(
+            LoginSignupHeader(
               headerName: 'Login',
             ),
             CustomTextFormField(
