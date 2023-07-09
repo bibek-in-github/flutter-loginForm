@@ -1,13 +1,37 @@
 import 'package:flutter/material.dart'
-    show AppBar, Axis, BorderRadius, BoxDecoration, BuildContext, Colors, Column, Container, EdgeInsets, Icons, MainAxisAlignment, MaterialPageRoute, Navigator, Row, Scaffold, SingleChildScrollView, SizedBox, StatelessWidget, Text, TextButton, TextEditingController, TextInputType, TextStyle, Widget;
-import 'package:login_form/Comm/genLoginSignupHeader.dart';
-import 'package:login_form/Comm/gen_text_form_field.dart';
-import 'package:login_form/Screens/SignupForm.dart';
+    show
+        AppBar,
+        Axis,
+        BorderRadius,
+        BoxDecoration,
+        BuildContext,
+        Colors,
+        Column,
+        Container,
+        EdgeInsets,
+        Icons,
+        MainAxisAlignment,
+        Row,
+        Scaffold,
+        SingleChildScrollView,
+        SizedBox,
+        StatelessWidget,
+        Text,
+        TextButton,
+        TextEditingController,
+        TextInputType,
+        TextStyle,
+        Widget;
+import '../app.dart';
+import '../widgets/molecules/index.dart';
+import 'signup_page.dart';
 
-class LoginForm extends StatelessWidget {
+class LoginPage extends StatelessWidget {
+  static const routeName = "login_page";
+
   final _conUserId = TextEditingController();
   final _conPassword = TextEditingController();
-  LoginForm({super.key});
+  LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +44,7 @@ class LoginForm extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            genLoginSignupHeader(
+            LoginSignupHelper(
               headerName: 'Login',
             ),
             CustomTextFormField(
@@ -60,12 +84,7 @@ class LoginForm extends StatelessWidget {
                 const Text('Does not have account?'),
                 TextButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => const SignupForm(),
-                      ),
-                    );
+                    mainNavigator.currentState?.pushNamed(SignupPage.routeName);
                   },
                   child: const Text(
                     'Signup',
