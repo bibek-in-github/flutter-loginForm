@@ -6,12 +6,14 @@ class CustomTextFormField extends StatelessWidget {
   final IconData icon;
   final bool isObscureText;
   final TextInputType inputType;
+  final String? errorMsg;
   const CustomTextFormField(
       {required this.controller,
       required this.hintname,
       required this.icon,
       this.isObscureText = false,
       required this.inputType,
+      this.errorMsg,
       super.key});
 
   @override
@@ -24,23 +26,23 @@ class CustomTextFormField extends StatelessWidget {
         obscureText: isObscureText,
         keyboardType: inputType,
         decoration: InputDecoration(
-          enabledBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(30.0)),
-            borderSide: BorderSide(
-              color: Colors.transparent,
+            enabledBorder: const OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(30.0)),
+              borderSide: BorderSide(
+                color: Colors.transparent,
+              ),
             ),
-          ),
-          focusedBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(30.0)),
-            borderSide: BorderSide(
-              color: Colors.blue,
+            focusedBorder: const OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(30.0)),
+              borderSide: BorderSide(
+                color: Colors.blue,
+              ),
             ),
-          ),
-          prefixIcon: Icon(icon),
-          hintText: hintname,
-          fillColor: Colors.grey[200],
-          filled: true,
-        ),
+            prefixIcon: Icon(icon),
+            hintText: hintname,
+            fillColor: Colors.grey[200],
+            filled: true,
+            errorText: errorMsg),
       ),
     );
   }
