@@ -24,6 +24,7 @@ import 'package:flutter/material.dart'
 import '../app.dart';
 import '../widgets/molecules/index.dart';
 import 'login_page.dart';
+import 'package:toast/toast.dart';
 
 class SignupPage extends StatelessWidget {
   static const routeName = "signup_page";
@@ -32,6 +33,18 @@ class SignupPage extends StatelessWidget {
   final _conEmail = TextEditingController();
   final _conPassword = TextEditingController();
   final _conCPassword = TextEditingController();
+
+  signUp(){
+    String  uid = _conUserId.text;
+
+    if (uid.isEmpty) {
+      Toast.show("Please Enter User ID", duration: Toast.lengthLong, gravity:  Toast.bottom);
+      
+    }
+  }
+
+
+
   SignupPage({super.key});
   @override
   Widget build(BuildContext context) {
@@ -96,7 +109,7 @@ class SignupPage extends StatelessWidget {
               borderRadius: BorderRadius.circular(30.0),
             ),
             child: TextButton(
-              onPressed: () {},
+              onPressed: signUp(),
               child: const Text(
                 'Signup',
                 style: TextStyle(color: Colors.white),

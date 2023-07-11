@@ -24,13 +24,13 @@ class CustomTextFormField extends StatelessWidget {
         obscureText: isObscureText,
         keyboardType: inputType,
         decoration: InputDecoration(
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(30.0)),
             borderSide: BorderSide(
               color: Colors.transparent,
             ),
           ),
-          focusedBorder: OutlineInputBorder(
+          focusedBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(30.0)),
             borderSide: BorderSide(
               color: Colors.blue,
