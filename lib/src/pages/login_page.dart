@@ -24,7 +24,7 @@ import 'package:flutter/material.dart'
         Widget;
 import '../app.dart';
 import '../widgets/molecules/index.dart';
-import 'signup_page.dart';
+import 'signup/signup_page.dart';
 
 class LoginPage extends StatelessWidget {
   static const routeName = "login_page";
