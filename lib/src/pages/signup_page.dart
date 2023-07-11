@@ -1,3 +1,6 @@
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:js';
+
 import 'package:flutter/material.dart'
     show
         AppBar,
@@ -20,11 +23,12 @@ import 'package:flutter/material.dart'
         TextInputType,
         TextStyle,
         Widget;
+import 'package:login_form/src/database/index.dart';
+// import 'package:toast/toast.dart';
 
 import '../app.dart';
 import '../widgets/molecules/index.dart';
 import 'login_page.dart';
-import 'package:toast/toast.dart';
 
 class SignupPage extends StatelessWidget {
   static const routeName = "signup_page";
@@ -34,16 +38,28 @@ class SignupPage extends StatelessWidget {
   final _conPassword = TextEditingController();
   final _conCPassword = TextEditingController();
 
-  signUp(){
-    String  uid = _conUserId.text;
+  signUp() {
+    String uid = _conUserId.text;
+    String uName = _conUserName.text;
+    String email = _conEmail.text;
+    String password = _conPassword.text;
+    String cPassword = _conCPassword.text;
 
     if (uid.isEmpty) {
-      Toast.show("Please Enter User ID", duration: Toast.lengthLong, gravity:  Toast.bottom);
-      
+      alertDialog(context as BuildContext, "Please Enter User ID");
+
+      // Toast.show("Please Enter User ID",
+      //       duration: Toast.lengthLong, gravity: Toast.bottom);
+    } else if (uName.isEmpty) {
+      alertDialog(context as BuildContext, "Please Enter User Name");
+    } else if (email.isEmpty) {
+      alertDialog(context as BuildContext, "Please Enter Email");
+    } else if (password.isEmpty) {
+      alertDialog(context as BuildContext, "Please Enter Password");
+    } else if (cPassword.isEmpty) {
+      alertDialog(context as BuildContext, "Please Enter Confirm Password");
     }
   }
-
-
 
   SignupPage({super.key});
   @override
