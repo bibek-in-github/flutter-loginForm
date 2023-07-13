@@ -1,30 +1,12 @@
 import 'package:flutter/material.dart'
-    show
-        AppBar,
-        Axis,
-        BorderRadius,
-        BoxDecoration,
-        BuildContext,
-        Colors,
-        Column,
-        Container,
-        EdgeInsets,
-        Icons,
-        MainAxisAlignment,
-        Row,
-        Scaffold,
-        SingleChildScrollView,
-        SizedBox,
-        StatelessWidget,
-        Text,
-        TextButton,
-        TextEditingController,
-        TextInputType,
-        TextStyle,
-        Widget;
+    show AppBar, Axis, BorderRadius, BoxDecoration, BuildContext, Colors, Column, Container, CrossAxisAlignment, EdgeInsets, Icon, Icons, MainAxisAlignment, Row, Scaffold, SingleChildScrollView, SizedBox, StatelessWidget, Text, TextButton, TextEditingController, TextInputType, TextStyle, Widget;
+import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:login_form/src/widgets/atom/input_field.dart';
 import '../app.dart';
 import '../widgets/molecules/index.dart';
 import 'signup/signup_page.dart';
+
+import 'package:login_form/src/validators/auth_validators.dart';
 
 class LoginPage extends StatelessWidget {
   static const routeName = "login_page";
@@ -47,6 +29,34 @@ class LoginPage extends StatelessWidget {
             LoginSignupHelper(
               headerName: 'Login',
             ),
+              // FormBuilder(
+              // // key: formKey,
+              // child: const Column(
+              //   crossAxisAlignment: CrossAxisAlignment.stretch,
+              //   children: [
+              //     TextInput(
+              //       prefixIcon: Icon(Icons.person_outline),
+              //       label: "User Name",
+              //       name: "user_name",
+              //       // validator: userNameValidator,
+              //       hintText: "Enter your name",
+              //       required: true,
+              //       keyboardType: TextInputType.name,
+              //       showCounter: false,
+              //       maxLength: 20,
+              //       // enabledBorder: const OutlineInputBorder(
+              //       //   borderRadius: BorderRadius.all(Radius.circular(30.0)),
+              //       //   borderSide: BorderSide(
+              //       //     color: Colors.transparent,
+              //       //   ),
+              //       ),
+              //       // focusedBorder: const OutlineInputBorder(
+              //       //   borderRadius: BorderRadius.all(Radius.circular(30.0)),
+              //       //   borderSide: BorderSide(
+              //       //     color: Colors.blue,
+              //       //   ),
+              //       // ),
+              //    ] ),),
             CustomTextFormField(
               controller: _conUserId,
               hintname: 'User ID',
