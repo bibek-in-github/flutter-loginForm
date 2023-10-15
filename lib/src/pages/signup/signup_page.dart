@@ -58,20 +58,24 @@ class SignupPage extends StatelessWidget with SignupViewModel, AuthValidator {
     String password = _conPassword.text;
     String cPassword = _conCPassword.text;
 
-    if (uid.isEmpty) {
-      alertDialog(context, "Please Enter User ID");
+    
+    
 
-      // Toast.show("Please Enter User ID",
-      //       duration: Toast.lengthLong, gravity: Toast.bottom);
-    } else if (uName.isEmpty) {
-      alertDialog(context, "Please Enter User Name");
-    } else if (email.isEmpty) {
-      alertDialog(context, "Please Enter Email");
-    } else if (password.isEmpty) {
-      alertDialog(context, "Please Enter Password");
-    } else if (cPassword.isEmpty) {
-      alertDialog(context, "Please Enter Confirm Password");
-    }
+    // if (uid.isEmpty) {
+    //   alertDialog(context, "Please Enter User ID");
+
+     
+    // } else if (uName.isEmpty) {
+    //   alertDialog(context, "Please Enter User Name");
+    // } else if (email.isEmpty) {
+    //   alertDialog(context, "Please Enter Email");
+    // } else if (password.isEmpty) {
+    //   alertDialog(context, "Please Enter Password");
+    // } else if (cPassword.isEmpty) {
+    //   alertDialog(context, "Please Enter Confirm Password");
+
+    // }
+   
   }
 
   SignupPage({super.key});
